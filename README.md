@@ -1,6 +1,9 @@
 # 🔒 Next.js JWT & Cookie Authentication
 
-## 🛠 Tech Stack
+
+<h2 align="center">
+  🔧 <b>Tech Stack</b> ⚙️
+</h2>
 
 <p align="center">
   <a href="https://nextjs.org/" target="_blank">
