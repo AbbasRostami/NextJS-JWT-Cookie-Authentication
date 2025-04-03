@@ -25,7 +25,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     };
 
     fetchData();
-  }, [setIsLoggedIn, setUser]);  // افزودن setIsLoggedIn و setUser به وابستگی‌ها
+  }, [setIsLoggedIn, setUser]);
 
   return <>{children}</>;
 }
