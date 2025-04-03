@@ -1,6 +1,6 @@
 "use client";
 
-import axios from "axios";
+import axios, { AxiosError } from "axios";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import { useSetAtom } from "jotai";
 import { useRouter } from "next/navigation";
@@ -30,14 +30,18 @@ export default function LoginForm() {
   const onSubmit = async (values: { email: string; password: string }) => {
     startTransition(async () => {
       try {
-        const res = await axios.post("/api/auth/login", values, {
+        await axios.post("/api/auth/login", values, {
           withCredentials: true,
         });
         setIsLoggedIn(true);
         router.push("/");
         toast.success("ورود موفقیت‌آمیز بود");
-      } catch (error: any) {
-        toast.error(error?.response?.data?.error || "خطایی رخ داد");
+      } catch (error) {
+        if (error instanceof AxiosError) {
+          toast.error(error.response?.data?.error || "خطایی رخ داد");
+        } else {
+          toast.error("خطایی رخ داد");
+        }
       }
     });
   };

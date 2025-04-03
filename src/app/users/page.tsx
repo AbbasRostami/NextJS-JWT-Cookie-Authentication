@@ -1,4 +1,3 @@
-import { useAuth } from "../context/CoockiesProvider";
 import UserInfo from "../userinfo/UserInfo";
 
 interface UserType {

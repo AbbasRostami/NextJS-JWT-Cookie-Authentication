@@ -1,6 +1,6 @@
 "use client";
 
-import axios from "axios";
+import axios, { AxiosError } from "axios";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 
 import { useRouter } from "next/navigation";
@@ -39,8 +39,12 @@ export default function SignupForm() {
         const res = await axios.post("/api/auth/signup", values);
         toast.success(res?.data?.message);
         router.push("/login");
-      } catch (error: any) {
-        toast.error(error?.response?.data?.error);
+      } catch (error) {
+        if (error instanceof AxiosError) {
+          toast.error(error.response?.data?.error || "خطایی رخ داد");
+        } else {
+          toast.error("خطایی رخ داد");
+        }
       }
     });
   };
