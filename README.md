@@ -39,7 +39,7 @@ This project demonstrates a simple user authentication system using **Next.js** 
 
 ## Project Structure 📂
 ```
-┏━━ 📁 abbasrostami-nextjs-jwt-cookie-authentication/
+┏━━ 📁 nextjs-jwt-cookie-authentication/
 ┃
 ┣━ 📄 .env.example                # Environment variables template
 ┣━ 📁 public/                     # Static assets
