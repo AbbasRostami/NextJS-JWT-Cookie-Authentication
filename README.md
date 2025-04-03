@@ -24,7 +24,7 @@
   </a>
 </p>
 
-This project demonstrates a simple user authentication system using **Next.js** with **JWT (JSON Web Token)** for **authentication** and cookies for session management. It includes basic functionality for user registration, login, and protected routes. 
+This project demonstrates a simple user authentication system using **Next.js 15** with **JWT (JSON Web Token)** for **authentication** and cookies for session management. It includes basic functionality for user registration, login, and protected routes. 
 
 ## Key Features ✨
 
