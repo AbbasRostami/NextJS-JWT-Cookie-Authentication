@@ -1,13 +1,15 @@
 # 🔒 Next.js JWT & Cookie Authentication
 
+## 🛠 Tech Stack
+
 <p align="center">
+  <a href="https://nextjs.org/" target="_blank">
+    <img alt="Next.js" src="https://img.shields.io/badge/Next.js-15.1.7-000000?logo=next.js&logoColor=white&style=for-the-badge">
+  </a>
   <a href="https://www.typescriptlang.org/" target="_blank">
     <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-5.0-3178C6?logo=typescript&logoColor=white&style=for-the-badge">
   </a>
   
-  <a href="https://nextjs.org/" target="_blank">
-    <img alt="Next.js" src="https://img.shields.io/badge/Next.js-15.1.7-000000?logo=next.js&logoColor=white&style=for-the-badge">
-  </a>
 
 
   <a href="https://tailwindcss.com/" target="_blank">
