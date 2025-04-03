@@ -12,7 +12,6 @@
     "axios": "^1.8.2",
     "formik": "^2.4.6",
     "jotai": "^2.12.2",
-    "js-cookie": "^3.0.5",
     "jsonwebtoken": "^9.0.2",
     "next": "15.1.7",
     "react": "^19.0.0",
