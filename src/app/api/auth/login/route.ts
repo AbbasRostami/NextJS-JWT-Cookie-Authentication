@@ -40,6 +40,7 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ message: 'ورود موفقیت‌آمیز بود' }, { status: 200 });
   } catch (error) {
+    console.error('Login error:', error);
     return NextResponse.json(
       { error: 'خطایی در پردازش درخواست رخ داد.' },
       { status: 500 }

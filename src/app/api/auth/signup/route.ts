@@ -36,6 +36,7 @@ export async function POST(request: Request) {
             { status: 201 }
         );
     } catch (error) {
+        console.error('Error during signup:', error);
         return NextResponse.json(
             { error: 'خطایی در پردازش درخواست رخ داد.' },
             { status: 500 }
