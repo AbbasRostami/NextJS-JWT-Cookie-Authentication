@@ -8,7 +8,7 @@ const Footer = () => {
     </div>
   
     <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center relative z-10">
-      <p className="text-lg font-semibold tracking-wide text-gray-300">
+    <p className="text-sm md:text-lg font-semibold tracking-wide text-gray-300">
         &copy; {new Date().getFullYear()} Your Company Name. All Rights Reserved.
       </p>
   
