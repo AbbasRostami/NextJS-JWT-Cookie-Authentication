@@ -34,7 +34,9 @@ export default function LoginForm() {
           withCredentials: true,
         });
         setIsLoggedIn(true);
-        router.push("/");
+        // router.push("/");
+        window.location.href = "/";
+
         toast.success("ورود موفقیت‌آمیز بود");
       } catch (error) {
         if (error instanceof AxiosError) {
