@@ -11,7 +11,7 @@ import { useTransition } from "react";
 
 export default function LoginForm() {
   const [isPending, startTransition] = useTransition();
-  const router = useRouter();
+  // const router = useRouter();
   const setIsLoggedIn = useSetAtom(isLoggedInAtom);
   const initialValues = {
     email: "",
