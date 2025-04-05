@@ -6,13 +6,16 @@ import { useSetAtom } from "jotai";
 // import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
 import * as Yup from "yup";
-import { isLoggedInAtom } from "../context/CoockiesProvider";
+import { isLoggedInAtom, userAtom } from "../context/CoockiesProvider";
 import { useTransition } from "react";
+import { getUserData } from "@/actions/isLogin";
 
 export default function LoginForm() {
   const [isPending, startTransition] = useTransition();
   // const router = useRouter();
   const setIsLoggedIn = useSetAtom(isLoggedInAtom);
+  const setUser = useSetAtom(userAtom);
+
   const initialValues = {
     email: "",
     password: "",
@@ -33,11 +36,14 @@ export default function LoginForm() {
         await axios.post("/api/auth/login", values, {
           withCredentials: true,
         });
-        setIsLoggedIn(true);
-        // router.push("/");
-        window.location.href = "/";
+        const { isLoggedIn, user } = await getUserData();
+
+        setIsLoggedIn(isLoggedIn);
+        setUser(user);
 
         toast.success("ورود موفقیت‌آمیز بود");
+
+        window.location.href = "/";
       } catch (error) {
         if (error instanceof AxiosError) {
           toast.error(error.response?.data?.error || "خطایی رخ داد");
